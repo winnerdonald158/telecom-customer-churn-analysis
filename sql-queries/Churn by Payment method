@@ -1,0 +1,25 @@
+                                     Churn by Payment Method
+
+                        BUSINESS QUESTION
+Which payment method has the highest churn rate?
+
+                     QUERY
+SELECT
+Payment_Method,
+COUNT(*) number_of_customers,
+SUM(CASE WHEN Customer_Status = 'Churned' THEN 1 ELSE 0 END) Churned_customers,
+ROUND(
+    CAST(SUM(CASE WHEN Customer_Status = 'Churned' THEN 1 ELSE 0 END)AS FLOAT) * 100/COUNT(*),2)Churn_rate
+FROM telecom_customer
+GROUP  BY Payment_method
+ORDER BY ROUND(
+    CAST(SUM(CASE WHEN Customer_Status = 'Churned' THEN 1 ELSE 0 END)AS FLOAT) * 100/COUNT(*),2) ASC
+
+
+                             KEY FINDINGS
+Mailed Check shows the highest churn rate, indicating that customers using this payment method are more likely to leave,while the
+Bank Withdrawal has the highest number of churned customers due to its large customer base 
+
+                          RECOMMENDATION
+Our Teams should find out  the reasons behind the high churn rate among Mailed Check users, as this group shows a higher likelihood of leaving. 
+At the same time, customers retention strategies should be applied to Bank Withdrawal customers due to their large volume and overall impact on churn.
