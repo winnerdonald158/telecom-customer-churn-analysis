@@ -1,0 +1,17 @@
+                                            Customers by City
+
+                                 BUSINESS QUESTION :
+"Which cities have more than 100 customers? Show me the city name and customer count, sorted from highest to lowest
+
+                              QUERIES
+SELECT
+	City,
+	COUNT(*) Customercount
+FROM telecom_customer
+GROUP BY City
+HAVING COUNT(*) > 100
+ORDER BY COUNT(*)DESC
+
+
+                              KEY FINDINGS
+5 Cities have higher customers
