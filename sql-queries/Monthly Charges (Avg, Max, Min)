@@ -1,0 +1,13 @@
+                                            Monthly Charges (Avg, Max, Min)
+
+                                           BUSINESSS QUESTION
+What is the average monthly charge across all customers? Also, what are the highest and lowest charges?
+
+                              QUERIES
+SELECT
+    AVG(Monthly_Charge) AS avg_monthly_charge,
+    MAX(Monthly_Charge) AS highest_monthly_charge,
+    MIN(Monthly_Charge) AS lowest_monthly_charge
+FROM telecom_customer
+
+                                 
