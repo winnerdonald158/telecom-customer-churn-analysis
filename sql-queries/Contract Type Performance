@@ -1,0 +1,22 @@
+                                      Contract Type Performance
+
+                                  BUSINESS QUESTION
+Can you break down our customers by contract type, including total customers, total revenue, and average monthly charge??
+
+                                  QUERIES
+SELECT
+	Contract,
+	COUNT(*) total_number_ofcustomers,
+	ROUND(SUM(Total_Revenue),2) Total_Revenue,
+	AVG(Monthly_Charge) Avg_monthly_charge
+FROM telecom_customer
+GROUP BY Contract
+
+                                        KEY FINDING
+This shows that we have more customers in Month-to-Month Contract than in our One Year Contract and Two Years Contract, and these customers are likely to leave.
+They are not fully committed
+
+                                RECOMMENDATIONS
+Since most of customers are on Month-to-Month contracts, this suggests a higher risk of churn(thats these customers are most likey to leave )  due to low commitment.
+The business can improve retention by encouraging these month-to month  customers to move to One-Year or Two-Year plans through targeted offers, discounts, or 
+added value services.
