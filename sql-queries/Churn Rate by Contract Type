@@ -1,0 +1,24 @@
+                                               Churn Rate by Contract Type
+
+                              Business Question
+What is our churn rate for each contract type?
+
+                         QUERY
+SELECT 
+    Contract,
+    COUNT(*) Total_customer,
+    SUM(CASE WHEN Customer_Status = 'Churned' THEN 1 ELSE 0 END) AS churned_customers,
+    ROUND(
+        CAST(SUM(CASE WHEN Customer_Status = 'Churned' THEN 1 ELSE 0 END) AS FLOAT) * 100 / COUNT(*),
+        2
+    ) AS churn_rate
+FROM telecom_customer
+GROUP BY Contract
+
+                       KEY FINDINGS
+Our Month-to-Month Contract Type have the highest churn customers that means most of our customers are leaving , from 3610 customers, a total of 1655 has 
+gone,which bring about a huge lost in revenue, sales 
+
+
+I will also recommend for to  improve customers retention by encouraging these customers(Month-to-Month customers)to move to One-Year or Two-Year plans through 
+targeted offers, discounts, or added value services.
