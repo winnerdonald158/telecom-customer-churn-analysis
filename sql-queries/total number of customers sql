@@ -1,0 +1,9 @@
+                                              Total number of customers 
+                            
+                                            BUSINESS QUESTION
+     How many customers do we currently have in total?”
+
+                                        SQL QUERY
+  SELECT
+	COUNT(*) Total_customer
+  FROM telecom_customer
