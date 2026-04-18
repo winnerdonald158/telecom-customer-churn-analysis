@@ -47,23 +47,23 @@ Summary of customer distribution
 Early insights into churn patterns
   
      Key Findings
-   Churn Behavior
+   Churn Behavior:
 Most of our customers leave without clearly stating any reason
 Some customers leave for competitors,attitude, showing possible gaps in value or service
 
-   Contract Type
+   Contract Type:
 Most customers are on Month-to-Month contracts
 These customers are more flexible but also more likely to leave
 
-  Payment Method
+  Payment Method:
 Our Bank Withdrawal has the highest number of churned customers (due to large user base)
 Meanwhile our cailed Check has the highest churn rate, meaning customers using this payment method  are more likely to leave
 
-   Customer Value Risk
+   Customer Value Risk:
 Some new customers (≤12 months) are already paying above average
 These customers are high-value but still leaving early
 
-   Customer Behavior
+   Customer Behavior:
 Customers with short tenure and high charges are more likely to churn
 Lack of additional services also increases churn risk
 
