@@ -1,0 +1,23 @@
+                                          Top Churn Reasons
+
+                        BUSINESS QUESTION
+What are the top reasons customers are churning across different churn categories?
+
+               QUERY
+SELECT
+	Churn_Category,
+	Churn_Reason,
+	COUNT(*)affected_customers
+FROM  telecom_customer 
+GROUP BY Churn_Category,Churn_Reason
+ORDER BY affected_customers DESC
+
+                                    KEY FINGINGS
+Most of our customers leave without any reason while a others leave for competitors. This suggests hidden issues in customer experience, 
+pricing, or service value that are not being captured.
+
+                             RECOMMENDATION
+Our various team implement a feedback system that will help us better understand why customers are leaving. This can include exit surveys, follow-up calls,
+or short feedback forms at the point of churn.
+At the same time, since some customers are leaving for competitors,attitude. The company should review its pricing and service quality.
+Improving customer experience at various department  will also help reduce unexplained churn.
