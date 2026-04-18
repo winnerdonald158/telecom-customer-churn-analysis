@@ -1,0 +1,25 @@
+                                                  High-Risk Customers
+
+                       BUSINESS QUESTION
+Can you identify customers who have been with us for exactly 12 months or less AND have Month-to-Month contracts AND are paying above the overall average monthly
+charge. These are high-risk customers we need to contact
+
+                         QUERY
+SELECT
+    Customer_ID,
+    Tenure_in_Months,
+    Contract,
+    Monthly_Charge
+FROM telecom_customer
+WHERE Tenure_in_Months <= 12
+    AND Contract = 'Month-to-Month'
+    AND Monthly_Charge > (
+        SELECT AVG(Monthly_Charge)
+        FROM telecom_customer
+    );
+
+                                      KEY FINDINGS
+These are customers paying higher monthly charges without long-term commitment, which may increase the likelihood forearly churn.
+                                
+                                   RECOMMENDATION
+Thare is a need to offer discounts or incentives to encourage Month-to-Month customers to move to longer-term plans and improve their early experience
