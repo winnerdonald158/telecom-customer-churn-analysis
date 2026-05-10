@@ -126,7 +126,7 @@ This project shows that churn customers  is not just about numbers,it’s about 
 Connect With Me
 Winner Donald
 📧 winnerdonald158@gmail.com
-🔗 LinkedIn
+🔗 LinkedIn www.linkedin.com/in/winner-donald
 💻 GitHub
 📍 Abuja, Nigeria
 
